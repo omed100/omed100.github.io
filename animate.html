@@ -1,0 +1,61 @@
+<html>
+	<head>
+		<title>Your title goes here</title>
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+		<style type="text/css">
+			#outerDiv
+			{
+
+				height: 150px;
+				width: 150px;
+				border: 20px solid;
+				border-bottom-color: #A3007A;
+				border-top-color: #FF3300;
+				border-left-color: #00FF00;
+				border-right-color: #0066FF;
+				border-radius: 100%;
+				transition : all ease 2s;
+				-webkit-transition : all ease 1s;
+			}
+			#outerDiv:hover
+			{
+
+				transform:rotate(360deg);
+				-webkit-transform:rotate(360deg);
+			}
+		</style>;
+	</head>
+	<body>
+		<div id="outerDiv">
+		</div>
+	</body>
+	<script type="text/javascript">
+
+	function addListeners()
+	{
+	    document.getElementById('outerDiv').addEventListener('mousedown', mouseDown, false);
+	    window.addEventListener('mouseup', mouseUp, false);
+
+	}
+
+	function mouseUp()
+	{
+	    window.removeEventListener('mousemove', divMove, true);
+	}
+
+	function mouseDown(e)
+	{
+	  window.addEventListener('mousemove', divMove, true);
+	}
+
+	function divMove(e)
+	{
+	   	 var div = document.getElementById('outerDiv');
+	 	 div.style.position = 'absolute';
+	 	 div.style.top = e.clientY + 'px';
+	 	 div.style.left = e.clientX + 'px';
+	}
+
+	window.onload = addListeners();
+	</script>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>
+			Rectangle
+		</title>
+		<style type="text/css">
+		#result
+		{
+			border:1px solid #000;
+			opacity: 0
+		}
+		</style>
+	</head>
+	<body>
+		<div>
+			<input type="text" id="num1" />
+			<input type="text" id="num2" /><br/>
+			<input type="submit" id="submit" value="Get Shap" onclick="Rectangle ()" />
+		</div>
+		<div id="result"></div>
+		<script type="text/javascript">
+			function Rectangle () {
+					
+				var num1 = parseInt(document.getElementById("num1").value);
+				var num2 = parseInt(document.getElementById("num2").value);
+				var el = document.getElementById("result");
+
+				if(num2==num1)
+				{
+					el.style.width = num1+"px";
+					el.style.height = num1+"px";
+					el.style.opacity = 1;
+				}
+
+				else
+				{
+					el.style.width = num1+"px";
+					el.style.height = num2+"px";
+					el.style.opacity = 1;
+				}
+			}
+		</script>
+	</body>
+</html>

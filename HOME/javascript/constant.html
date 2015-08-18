@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>
+			Ditermen Cherecter
+		</title>
+		<style type="text/css">
+		</style>
+	</head>
+	<body>
+		<div>
+			<input type="text" id="num1" />
+			<input type="submit" id="submit" value="Check Here" onclick="Consonant()" />
+		</div>
+		<div id="result"></div>
+		<script type="text/javascript">
+			function Consonant(){
+				var result = document.getElementById("result");
+				var a = document.getElementById("num1").value;
+				x = parseInt(a);
+
+
+				if(a.length>1)
+				{
+					alert("Please put only 1 letter")
+					return;
+				}
+
+				if(isNaN(a))
+				{
+					
+				}
+				else
+				{
+					alert("Please put a letter")
+					return;
+
+				}
+
+				var consonantLowerCase = ["b","c","d","f","g","h","j","k","l","m","n","p","q","r","s","t","v","w","x","y","z"];
+				var consonantUpperCase = ["B","C","D","F","G","H","J","K","L","M","N","P","Q","R","S","T","V","W","X","Y","Z"];
+
+				var vowelL = ["a","e","i","o","u"];
+				var vowelC = ["A","E","I","O","U"]
+
+				for (var i = 0; i < vowelC.length; i++) {
+					if(a==vowelL[i])
+					{
+						alert("You have put small letter vowel : "+ vowelL[i]);
+						return;
+					}
+					if (a==vowelC[i]) 
+					{
+						alert("You have put capital letter vowel : "+ vowelC[i]);
+						return;	
+					}
+				};
+
+				for (var i =0; i<consonantLowerCase.length; i++)
+				{
+					if (a==consonantLowerCase[i])
+					{
+						alert("You have put small letter Consonant : "+consonantLowerCase[i])
+						return;
+					}
+					if (a==consonantUpperCase[i])
+					{
+						alert("You have put capital letter Consonant : "+consonantUpperCase[i])
+						return;
+					}
+				}
+			}
+		</script>
+	</body>
+</html>

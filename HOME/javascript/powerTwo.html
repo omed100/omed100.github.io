@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	 <body>
+	 	<input id = "input"> 
+	 	<input type="submit" onClick="CheckTheNumber()">
+		<div id="result"></div>
+	 	<script type="text/javascript">
+	 	 	var count = 0;
+	 	 	function CheckTheNumber()
+	 	 	{//alert("calling function");
+	 	 		var result = document.getElementById("result");
+	 	 		var x = document.getElementById("input").value;
+	 	 		while(true)
+	 	 		{
+	 	 		if(x%2==0) {
+	 	 			x=x/2;
+	 	 		if (x==1) {
+	 	 			alert("This Number is power of 2");
+	 	 			break;
+	 	 		}
+	 	 		}
+	 	 		else
+	 	 		{
+	 	 		alert("This Number is not the power of 2");
+	 	 		break;
+	 	 		}
+	 	 		}
+	 	 	}
+	 	</script>
+	 </body>	
+</html>

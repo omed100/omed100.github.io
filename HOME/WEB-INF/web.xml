@@ -1,0 +1,24 @@
+<web-app>
+    <display-name>ContactManager</display-name>
+    <!-- SignUp from Registration -->
+    <servlet>
+        <servlet-name>Registration</servlet-name>
+        <servlet-class>manager.com.ManagerRegister</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>Registration</servlet-name>
+        <url-pattern>/signup</url-pattern>
+    </servlet-mapping>
+   <!-- SignUp from Registration -->
+
+<!-- SignIn form -->
+   <servlet>
+        <servlet-name>SignIn</servlet-name>
+        <servlet-class>manager.com.Signin</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SignIn</servlet-name>
+        <url-pattern>/signin</url-pattern>
+    </servlet-mapping>
+</web-app>

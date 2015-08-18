@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	</head>
+	<body>
+		First_arr:<input type ="text">
+		Second_arr:<input type ="text">
+		<input type="button" value="submit" onclick="get_Values()"><br>
+		<span></span><br>
+		<span></span>
+		<script>
+		var temp;
+		function get_Values()
+		{
+		var  x = document.getElementsByTagName("input")[0].value;
+		var y = document.getElementsByTagName("input")[1].value;
+		var x_arr=x.split(",");
+		var y_arr=y.split(",");
+		var mch = x_arr.concat( y_arr);
+		//console.log(x_arr);
+		//console.log(y_arr);
+		for(i=0;i<=mch.length;i++){
+			for(j=0;j<=mch.length;j++){
+				if(parseInt(mch[i])<=parseInt(mch[j])){
+					temp=mch[i];
+					mch[i]=mch[j];
+					mch[j]=temp;
+				}
+			}
+		}
+		document.getElementsByTagName('span')[0].innerHTML ="Sort:-"+mch;
+		for(k in x_arr){
+			for(l in y_arr){
+				if(k==l)
+				{
+					document.getElementsByTagName('span')[1].innerHTML ="Matched";
+				}
+				else
+				{
+					document.getElementsByTagName('span')[1].innerHTML ="Not Matched";
+				}
+			}
+		}
+	}
+		
+		</script>
+	</body>
+</html>
+ 

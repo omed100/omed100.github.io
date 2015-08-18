@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<link rel="icon" href="video/Home-icon.png" type="image/x-icon" />
+		<title>JQUERY</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="css/jquery.css">
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+		<script type="text/javascript" src="js/"></script>
+	</head>
+	<body>
+		<div class="mainDiv">
+			<div class="header_container">
+				<div class="header_features">
+					<div class="homelogo_container"></div>
+					<div class="name_container">
+						<span class="my">My</span>
+						<span class="html">JQUERY</span>
+						<span class="works">works</span>
+					</div>
+					<div class="profile_phpto">
+						<div class="photo"></div>
+						<div class="omed_ali">
+							Omed Ali<br>ZU-399
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="main_body_container">
+				<div class="body_features_container">
+					<div class="buttn_container">
+
+						<ul>
+							<li class="fist_list"><a href="#">Assignment1</a>
+								<ul>
+									<li><a href="http://192.168.12.83:8080/HOME/JQuery/acccordion.html" target="_blank" id="constant"></a>Slide</li>
+									<li><a href="http://192.168.12.83:8080/HOME/JQuery/slide.html"  id="slide"></a></li>
+									<li><a href="#" onclick="return false" id="number_type"></a></li>
+									<li><a href="#" onclick="return false"id="pairs"></a></li>
+									<li><a href="#" onclick="return false" id="rectangle"></a></li>
+									<li><a href="#" onclick="return false" id="sort"></a></li>
+								</ul>
+							</li>
+							<li><a href="#">Assignment2</a>
+								<ul>
+									<li><a href="#" onclick="return false">jquery</li>
+								</ul>
+							</li>
+							<li><a href="#">Assignment3</a>
+								<ul>
+									<li><a href="#" onclick="return false">jquery</li>
+								</ul>
+							</li>
+							<li><a href="#">Assignment4</a>
+								<ul>
+									<li><a href="#" onclick="return false">jquery</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+					<div class="main_data_container">
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+	$(document).ready(function()
+		{
+		$(".homelogo_container").click(function(){
+			window.location="home.html";
+		})
+		// $("#numberorder").click(function(){
+		// 	$(".main_data_container").load("javascript/NumberOrder.html");
+		// })
+	})
+	</script>
+</html>

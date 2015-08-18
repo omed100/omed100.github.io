@@ -1,0 +1,79 @@
+package manager.com;
+import java.sql.*;
+public class ConnectionPool
+{
+	private int NumberOfConnections;
+	private Connection[] connections;
+	private boolean[] available;
+	
+	public ConnectionPool(int NumberOfConnections)
+	{
+		this.NumberOfConnections = NumberOfConnections;
+		connections = new Connection[NumberOfConnections];
+		available = new boolean[NumberOfConnections];
+		
+		try
+		{
+			Class.forName("org.postgresql.Driver");
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+		
+		for(int i=0;i<NumberOfConnections;i++)
+		{
+			try
+			{
+			     connections[i] = DriverManager.getConnection("jdbc:postgresql://localhost:5432/contactManager","postgres","test");
+			     available[i] = true;
+			}
+		catch(Exception e)
+			{
+				e.printStackTrace();
+			}
+		}
+	}
+	
+	public Connection getConnection()
+	{
+		for(int i=0;i<NumberOfConnections;i++)
+		{
+			if(available[i])
+			{
+				available[i] = false;
+				return connections[i];
+			}
+		}
+		return null;
+	}
+	
+	public void returnConnection(Connection connection)
+	{
+		for(int i=0;i<NumberOfConnections;i++)
+		{
+			if(connections[i] == connection)
+			{
+				available[i] = true;
+				break;
+			}
+		}
+	}
+	
+	public void destroyConnections()
+	{
+		for(int i=0;i<NumberOfConnections;i++)
+		{
+			try
+			{
+				connections[i].close();
+			}
+			catch(Exception e)
+			{
+				e.printStackTrace();
+			}
+		}
+	}
+	
+	
+}

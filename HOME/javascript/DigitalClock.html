@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style type="text/css">
+		.clock
+		{
+			height: 300px;
+			width: 500px;
+			border: 1px solid;
+			background-color: black;
+			font-size:80px;
+			display: inline-block;
+			color: red;
+			line-height: 300px;
+			text-align: center;
+		}
+		</style>
+	</head>
+	<body>
+		<div id="digital" class="clock">12:12:12 AM</div>
+	</body>
+		<script type="text/javascript">
+		function startTime()
+		{
+			var currentTime = new Date();
+			//console.log(currentTime);
+			var am = "AM";
+			var h = currentTime.getHours();
+			var m = currentTime.getMinutes();
+			var s = currentTime.getSeconds();
+			if(h==0)
+				{
+					h=12;
+				}
+			else if (h>12) 
+				{
+					h=h-12;
+					am = "PM";
+				}
+				if(h<10)
+				{
+					h = "0"+h;
+				}
+				if(m<10)
+				{
+					m = "0"+m;
+				}
+				if(s<10)
+				{
+					s = "0"+s;
+				}
+				setTimeout("startTime()",1000);
+				//console.log(h+":"+m+":"+s+" "+am);
+				var myClock = document.getElementById("digital");
+				myClock.textContent = h+":"+m+":"+s+" "+am ;
+		}
+		startTime();
+		</script>
+</html>

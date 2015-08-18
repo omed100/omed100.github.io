@@ -1,0 +1,171 @@
+<html>
+	<head>
+		<style>
+			body{
+				text-align:center;
+			}
+			#box{
+				width:302px;
+				height:302px;
+				border:1px solid red;
+				margin-left:530px;
+
+			}
+			.buttn{
+					width:97px;
+					height:100px;
+					font-size:30px;
+					color:green;
+
+			}
+			h1{
+				color:#d6da70;	
+				}
+			#move{
+				width:100px;
+				height:40px;
+				border:1px solid black;
+				margin-left:50px;
+			}
+			p{
+				margin-left:-1200px;
+				margin-top:-300px;
+			}
+			p1{
+				margin-left:-1200px;
+				
+			}
+			#time{
+				width:100px;
+				height:40px;
+				border:1px solid black;
+				margin-left:50px;
+			}
+		</style>
+	</head>
+<body>
+	<h1> NUMBER GAME</h1>
+	<div id="box">
+		<input type="button" id="butt1" class="buttn"value='1' onClick="butt1click()"/>
+		<input type="button" id="butt2" class="buttn"value='2' onClick="butt2click()"/>
+		<input type="button" id="butt3" class="buttn"value='3' onClick="butt3click()"/>
+		<input type="button" id="butt4" class="buttn"value='4' onClick="butt4click()"/>
+		<input type="button" id="butt5" class="buttn"value='5' onClick="butt5click()"/>
+		<input type="button" id="butt6" class="buttn"value='6' onClick="butt6click()"/>
+		<input type="button" id="butt7" class="buttn"value='7' onClick="butt7click()"/>
+		<input type="button" id="butt8" class="buttn"value='8' onClick="butt8click()"/>
+		<input type="button" id="butt9" class="buttn"value=''  onClick="butt9click()"/>
+		</div>
+		<p> Moves:</p>
+		<div id='move'></div></br>
+		<p1> Time:</p1>
+		<div id='time'></div>	
+		<script>
+		count=0;
+		function timer(){
+			var ss=0;
+			
+		}
+		var butt1=document.getElementById("butt1");
+		var butt2=document.getElementById("butt2");
+		var butt3=document.getElementById("butt3");
+		var butt4=document.getElementById("butt4");
+		var butt5=document.getElementById("butt5");
+		var butt6=document.getElementById("butt6");
+		var butt7=document.getElementById("butt7");
+		var butt8=document.getElementById("butt8");
+		var butt9=document.getElementById("butt9");
+		function check(b1,b2){
+			if(b2.value==""){
+				//alert(b1.value)
+				b2.value=b1.value;
+				b1.value="";
+				checking();
+				count++;
+				//alert(count);
+				document.getElementById("move").innerHTML=count;
+			}
+		}
+		function butt1click(){
+			check(butt1,butt2);
+			check(butt1,butt4);
+		}
+		function butt2click(){
+			check(butt2,butt3);
+			check(butt2,butt1);
+			check(butt2,butt5);
+		}
+		function butt3click(){
+			check(butt3,butt2);
+			check(butt3,butt6);
+			
+		}
+		function butt4click(){
+			check(butt4,butt1);
+			check(butt4,butt5);
+			check(butt4,butt7);
+		}
+		function butt5click(){
+			check(butt5,butt2);
+			check(butt5,butt4);
+			check(butt5,butt6);
+			check(butt5,butt8);
+		}
+		function butt6click(){
+			check(butt6,butt3);
+			check(butt6,butt5);
+			check(butt6,butt9);
+		}
+		function butt7click(){
+			check(butt7,butt8);
+			check(butt7,butt4);
+			
+		}
+		function butt8click(){
+			check(butt8,butt7);
+			check(butt8,butt5);
+			check(butt8,butt9);
+		}
+		function butt9click(){
+			check(butt9,butt8);
+			check(butt9,butt6);
+			
+		}
+		function randomNumber(){
+		number=[];
+		while(number.length<8){
+			var x=Math.floor(Math.random()*8+1);
+			for(i=0;i<=number.length;i++){
+				if(number[i]!=x){
+				c=1;
+				}
+				else{
+				c=0;
+				break;
+				}
+			}
+			if(c==1){
+			number.push(x);
+			}
+		for(i=0;i<1;i++){
+				butt1.value=number[i];
+				butt2.value=number[i+1];
+				butt3.value=number[i+2];
+				butt4.value=number[i+3];
+				butt5.value=number[i+4];
+				butt6.value=number[i+5];
+				butt7.value=number[i+6];
+				butt8.value=number[i+7];
+			}
+		}//alert(number);
+		
+	}
+	function checking(){
+		if(butt1.value==1 && butt2.value==2 && butt3.value==3 && butt4.value==4 && butt5.value==5 && butt6.value==6 && butt7.value==7 && butt8.value==8 && butt9.value==""){
+			alert("CONGRATULATIONS..YOU WON!")
+		}
+	}
+	randomNumber()
+		</script>
+</body>
+</html>

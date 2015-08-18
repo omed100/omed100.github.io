@@ -1,0 +1,66 @@
+package com.alim.mybook;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+
+public class Connections
+{
+
+	private String dbName;
+	private Connection[] connections;
+	private boolean[] exists;
+
+	public Connections(String dbName, int total)
+	{
+		this.dbName = dbName;
+		try
+		{
+			connections = new Connection[total];
+			exists = new boolean[total];
+			Connection connection = null;
+
+			for (int i = 0; i < total; i++)
+			{
+				Class.forName("org.postgresql.Driver");
+				connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/" + this.dbName,	"postgres", "test");
+				connections[i] = connection;
+				exists[i] = true;
+			}
+		}
+		catch (Exception e)
+		{
+			e.printStackTrace();
+		}
+	}
+
+	public Connection getConnection()
+	{
+		Connection c = null;
+		do
+		{
+			for (int i = 0; i < connections.length; i++)
+			{
+				if (exists[i])
+				{
+					exists[i] = false;
+					c = connections[i];
+					break;
+				}
+			}
+		}
+		while (c == null);
+		return c;
+	}
+	
+	public void restore(Connection c)
+	{
+		for (int i = 0; i < connections.length; i++)
+		{
+			if (!exists[i])
+			{
+				connections[i] = c;
+				exists[i] = true;
+			}
+		}
+	}
+}

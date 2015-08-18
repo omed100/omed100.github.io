@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+			<meta charset="utf-8">
+			<link rel="stylesheet" href="http://code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css">
+			<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+			<script src="http://code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
+			<link rel="stylesheet" href="http:/resources/demos/style.css">
+			<style type="text/css">
+				*{
+					padding: 0;
+					margin: 0;
+				}
+				#accordion
+				{
+					width: 50%;
+					height: auto;
+					margin:20px auto;
+					border: 1px solid;
+				}
+				button{
+					display: block;
+					width: 100%;
+				}
+				#btn:hover
+				{
+				background-color: #FF6699;
+				}
+
+			</style>
+		<title>Accordian</title>
+	</head>
+		<body>
+		
+			<script type="text/javascript">
+				$(document).ready(function(){
+					$("#accordion").accordion();
+				})
+
+			</script>
+			<div id = "accordion">
+				<button id="btn">Section 1</button>
+				<div>
+					<p>hi I m omed</p>
+				</div>
+				<button id="btn2">Section 2</button>
+				<div>
+					<img src="images/image1.jpg" height="100" width="100" id="img1">
+				</div>
+
+			</div>
+		</body>
+</html>

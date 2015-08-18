@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>
+			Discount
+		</title>
+		<style type="text/css">
+			body
+			{
+				margin: 0;
+				padding: 0;
+				font-family: 'segoe UI'
+			}
+		</style>
+	</head>
+	<body>
+		<div>Type the three numbers in order and see the tesult that wheather it is increasing or decreasing or neither.</div>
+		<div class="Div1">
+			<input type="text" id="num1" />
+			<input type="text" id="num2" />
+			<input type="text" id="num3" />
+			<input type="submit" id="submit" value="Check Here" onclick="numUnique()" />
+		</div>
+		<div id="result"></div>
+		<script type="text/javascript">
+			function numUnique(){
+					var result = document.getElementById("result");
+					var x = parseInt(document.getElementById("num1").value);
+					var y = parseInt(document.getElementById("num2").value);
+					var z = parseInt(document.getElementById("num3").value);
+
+					if ((x<y)&& (y<z))
+					{
+						alert("Increasing")
+					}
+
+					else if ((x>y)&& (y>z))
+					{
+						alert("Decreasing")
+					}
+
+					else
+					{
+						alert("Neither")
+					}
+			}
+		</script>
+	</body>
+</html>

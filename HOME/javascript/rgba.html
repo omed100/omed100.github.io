@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style type="text/css">
+		div{
+			display: block;
+		}
+		#div1{
+
+			height: 200px;
+			width: 200px;
+			border: 1px solid;
+			display: block;
+		}
+
+		</style>
+	</head>
+	<body>
+		<div>
+			<level>Red:
+				<input type="range"  value="0" max="255" min="0"  id="red" onmouseup="myFunction()"/>
+			</level><br>
+				<level>Green:
+				<input type="range" value="0" max="255" min="0"  id="green" onmouseup="myFunction()"/>
+			</level></br>
+				<level>Blue:
+				<input type="range"  value="0" max="255" min="0"  id="blue" onmouseup="myFunction()"/>
+			</level>
+			<div id="div1">
+				<div>
+					<div id="noclr"></div>
+
+	</body>
+		<script type="text/javascript">
+			function myFunction(){
+
+				var x = parseInt(document.getElementById("red").value);
+				var y = parseInt(document.getElementById("blue").value);
+				var z = parseInt(document.getElementById("green").value);
+				if((x<=255)&&(y<=255)&&(z<=255))
+				{
+					document.getElementById("div1").style.backgroundColor="rgb("+x+","+y+","+z+")";
+				}
+				else
+				{
+
+					alert("put valid number")
+				}
+		
+				
+			}
+
+
+		</script>
+</html>

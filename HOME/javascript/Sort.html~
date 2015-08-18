@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    	<style>
+    	</style>
+        <title>
+            Sorting an Array
+        </title>
+    </head>
+    <body>
+    <div>Type comma separated numbers and sort it.</div>
+        <input type="text" style="width:700px" /><br>
+        <input type="button" value="Sort it" onclick="sortArray()" /></br>
+        <div id="result"></div>
+        <script type="text/javascript">
+
+            function sortArray()
+            {
+                var inp = document.getElementsByTagName('input')[0].value;
+                var all = inp.split(',');
+                var temp;
+                for (var i = 0; i < all.length; i++)
+                {
+                    for (var j = i+1; j < all.length; j++)
+                    {
+                        if (parseInt(all[i])<=parseInt(all[j]))
+                        {
+                            temp = all[i];
+                            all[i] = all[j];
+                            all[j] = temp;
+                        };
+                    };
+                };
+                document.getElementById('result').innerHTML = all;
+            }
+
+        </script>
+    </body>
+</html>
+

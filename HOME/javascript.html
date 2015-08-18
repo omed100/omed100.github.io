@@ -1,0 +1,172 @@
+<!doctype html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<link rel="icon" href="video/Home-icon.png" type="image/x-icon" />
+		<title>Javascript</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="css/javascript.css">
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+		<script type="text/javascript" src="js/"></script>
+	</head>
+	<body>
+		<div class="mainDiv">
+			<div class="header_container">
+				<div class="header_features">
+					<div class="homelogo_container"></div>
+					<div class="name_container">
+						<span class="my">My</span>
+						<span class="html">JAVASCRIPT</span>
+						<span class="works">works</span>
+					</div>
+					<div class="profile_phpto">
+						<div class="photo"></div>
+						<div class="omed_ali">
+							Omed Ali<br>ZU-399
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="main_body_container">
+				<div class="body_features_container">
+					<div class="buttn_container">
+						<ul>
+							<li class="fist_list"><a href="#">Assignment1</a>
+								<ul>
+									<li><a href="#" onclick="return false" id="constant">Constant</a></li>
+									<li><a href="#" onclick="return false" id="numberorder">Number Order</a></li>
+									<li><a href="#" onclick="return false" id="number_type">Number Type</a></li>
+									<li><a href="#" onclick="return false"id="pairs">Pairs</a></li>
+									<li><a href="#" onclick="return false" id="rectangle">Create Ractangle</a></li>
+									<li><a href="#" onclick="return false" id="sort">Sort 3 numbers</a></li>
+									<li><a href="#" onclick="return false" id="sumof_cube">Cube </a></li>
+								</ul>
+							</li>
+							<li><a href="#">Assignment2</a>
+								<ul>
+									<li><a href="#" onclick="return false" id="array_split">Array Split</a></li>
+									<li><a href="#" onclick="return false" id="sortNmatch">SortNMatching</a></li>
+									<li><a href="#" onclick="return false" id="repeated_nujmber">Repeated Number</a></li>
+									<li><a href="#" onclick="return false" id="biggerNumber">Bigger Number</a></li>
+									<li><a href="#" onclick="return false" id="evendigit">EvenDigit</a></li>
+									<li><a href="#" onclick="return false" id="power">Power of 2</a></li>
+									<li><a href="#" onclick="return false" id="reverse">Reverse</a></li>
+								</ul>
+							</li>
+							<li><a href="#">Assignment3</a>
+								<ul>
+									<li><a href="#" onclick="return false" id="rgb">RGB Color</a></li>
+									<li><a href="#" onclick="return false" class="sortthe_arry">Sort</a></li>
+									<li><a href="#" onclick="return false" class="digital">Digital Clock</li>
+									<li><a href="#" onclick="return false" class="find_replace">Find & Replace</li>
+									<li><a href="#" onclick="return false" class="cubeshape">Cube Shape</li>
+									<li><a href="#" onclick="return false" class="calculator">calculator</li>
+								</ul>
+							</li>
+							<li><a href="#">Assignment5</a>
+								<ul>
+									<li><a href="#" onclick="return false">javascript</li>
+								</ul>
+							</li>
+							<li><a href="#">Games</a>
+								<ul>
+									<li><a href="#" onclick="return false" id="tic_toc">Tic-Toc</li>
+									<li><a href="#" onclick="return false" id="dice">Dice Roll</li>
+								</ul>
+							</li>
+							<li><a href="#">Canvas</a>
+								<ul>
+									<li><a href="http://192.168.12.83:8080/HOME/canvas.html" target="_blank" id="canvas1">Rounding Ball</li>
+								</ul>
+							</li>
+							<li><a href="#">Others</a>
+								<ul>
+									<li><a href="http://192.168.12.83:8080/HOME/webdesinning.html" onclick="return false">UI Related1</li>
+									<li><a href="#" onclick="return false"></li>
+									<li><a href="#" onclick="return false"></li>
+									<li><a href="#" onclick="return false"></li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+					<div class="main_data_container">
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+	$(document).ready(function(){
+		$(".homelogo_container").click(function(){
+			window.location="home.html";
+		})
+
+		$("#constant").click(function(){
+			$(".main_data_container").load("javascript/constant.html");
+		})
+		$("#numberorder").click(function(){
+			$(".main_data_container").load("javascript/NumberOrder.html");
+		})
+		$("#number_type").click(function(){
+			$(".main_data_container").load("javascript/numUnique.html");
+		})
+		$("#pairs").click(function(){
+			$(".main_data_container").load("javascript/pairs.html");
+		})
+		$("#rectangle").click(function(){
+			$(".main_data_container").load("javascript/rectangle.html");
+		})
+		$("#sort").click(function(){
+			$(".main_data_container").load("javascript/rectangle.html");
+		})
+		$("#array_split").click(function(){
+			$(".main_data_container").load("javascript/short.html");
+		})
+		$("#sortNmatch").click(function(){
+			$(".main_data_container").load("javascript/sortingNmatching.html");
+		})
+		$("#repeated_nujmber").click(function(){
+			$(".main_data_container").load("javascript/ReapeatNumbr.html");
+		})
+		$("#biggerNumber").click(function(){
+			$(".main_data_container").load("javascript/biggerNumberArray.html");
+		})
+		$("#tic_toc").click(function(){
+			$(".main_data_container").load("javascript/numbergame.html");
+		})
+		$("#rgb").click(function(){
+			$(".main_data_container").load("javascript/rgba.html");
+		})
+		$(".sortthe_arry").click(function(){
+			$(".main_data_container").load("javascript/Sort.html");
+		})
+		$(".digital").click(function(){
+			$(".main_data_container").load("javascript/DigitalClock.html");
+		})
+		$("#evendigit").click(function(){
+			$(".main_data_container").load("javascript/evenDidit.html");
+		})
+		$(".find_replace").click(function(){
+			$(".main_data_container").load("javascript/findNreplace.html");
+		})
+		$("#power").click(function(){
+			$(".main_data_container").load("javascript/powerTwo.html");
+		})
+		$("#reverse").click(function(){
+			$(".main_data_container").load("javascript/reverse1.html");
+		})
+		$("#dice").click(function(){
+			$(".main_data_container").load("javascript/diceRoll.html");
+		})
+		$("#sumof_cube").click(function(){
+			$(".main_data_container").load("javascript/practice1.html");
+		})
+		$("#cubeshape").click(function(){
+			$(".main_data_container").load("javascript/practice2.html");
+		})
+		$("#calculator").click(function(){
+			$(".main_data_container").load("javascript/calculator.html");
+		})
+	})
+	</script>
+</html>

@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: segoe ui
+        }
+        body {
+            margin: 0px;
+            padding: 0px;
+        }
+        .borderDiv {
+            width: 100%;
+            border: 0px solid red;
+        }
+        .mainDiv {
+            width: 800px;
+            height: 700px;
+            border: 0px none;
+            margin: auto;
+            background: #FF0066;
+            background-size: cover;
+            background: linear-gradient(#FF0066, #FF0066)
+        }
+        .nullDiv {
+            width: 100%;
+            height: 100px;
+            margin: auto;
+        }
+        .ContainerDiv {
+            width: 550px;
+            height: 450px;
+            border: 5px solid #FFFFFF;
+            border-radius: 0px;
+            display: block;
+            margin: auto;
+            position: relative;
+            background: linear-gradient(#B2B2B2, #E0E0E0);
+            border-radius: 10px;
+        }
+        .leftContainer {
+            width: 220px;
+            height: 100%;
+            border: 0px none;
+            display: inline-block;
+            margin: auto;
+        }
+        .ContainerDiv1 {
+            width: 20px;
+            height: 300px;
+            border: 3px solid #ffffff;
+            float: right;
+            margin-top: -110px;
+            transform: rotate(40deg);
+            border-radius: 20px;
+            background: #A31919;
+            padding: 2px;
+        }
+        .ContainerDiv2 {
+            width: 20px;
+            height: 300px;
+            border: 3px solid #ffffff;
+            float: right;
+            margin-top: -110px;
+            transform: rotate(40deg);
+            border-radius: 20px;
+            background: #FF0066;
+            padding: 2px;
+        }
+        .ContainerDiv3 {
+            width: 20px;
+            height: 300px;
+            border: 3px solid #ffffff;
+            float: right;
+            margin-top: -110px;
+            transform: rotate(40deg);
+            border-radius: 20px;
+            background: #E600E6;
+            padding: 2px;
+        }
+        .ContainerDiv4 {
+            width: 20px;
+            height: 300px;
+            border: 3px solid #ffffff;
+            float: right;
+            margin-top: -110px;
+            transform: rotate(40deg);
+            border-radius: 20px;
+            background: #CC6600;
+            padding: 2px;
+        }
+        .ContainerDiv5 {
+            width: 20px;
+            height: 300px;
+            border: 3px solid #ffffff;
+            float: right;
+            margin-top: -110px;
+            transform: rotate(40deg);
+            border-radius: 20px;
+            background: #CC0000;
+            padding: 2px;
+        }
+        .rotatetext1 {
+            transform: rotate(-90deg);
+            position: absolute;
+            margin-left: -32px;
+            margin-top: 60px;
+            color: #ffffff;
+            font-weight: bold;
+        }
+        .rotatetext2 {
+            transform: rotate(-90deg);
+            position: absolute;
+            margin-left: -35px;
+            margin-top: 60px;
+            color: #ffffff;
+            font-weight: bold;
+        }
+        .rotatetext3 {
+            transform: rotate(-90deg);
+            position: absolute;
+            margin-left: -20px;
+            margin-top: 60px;
+            color: #ffffff;
+            font-weight: bold;
+        }
+        .rotatetext4 {
+            transform: rotate(-90deg);
+            position: absolute;
+            margin-left: -42px;
+            margin-top: 60px;
+            color: #ffffff;
+            font-weight: bold;
+        }
+        .rotatetext5 {
+            transform: rotate(-90deg);
+            position: absolute;
+            margin-left: -30px;
+            margin-top: 60px;
+            color: #ffffff;
+            font-weight: bold;
+        }
+        .leftround1 {
+            height: 20px;
+            width: 20px;
+            border: 4px solid #FFFFFF;
+            border-radius: 50%;
+            background: #FF0066;
+            box-shadow: 1px 1px 1px 1px #ffffff;
+            margin-top: 45px;
+            margin-left: 10px;
+        }
+        .leftround2 {
+            height: 50px;
+            width: 50px;
+            border: 4px solid #FFFFFF;
+            border-radius: 50%;
+            background: #FF0066;
+            box-shadow: 1px 1px 1px 1px #ffffff;
+            margin-top: -15px;
+            margin-left: -35px;
+            position: absolute;
+        }
+        .ineerRound1 {
+            height: 42px;
+            width: 42px;
+            border: 4px solid #FF00FF;
+            border-radius: 50%;
+            position: absolute;
+            opacity: 0.9;
+        }
+        .leftround3 {
+            height: 120px;
+            width: 120px;
+            border: 8px solid #FFFFFF;
+            border-radius: 50%;
+            background: #FF0066;
+            position: absolute;
+            margin-left: -30px;
+            margin-top: 30px;
+            padding: 3px;
+        }
+        .website {
+            font-size: 15px;
+            position: absolute;
+            color: #ffffff;
+            margin-top: 40px;
+            letter-spacing: -2px;
+            font-weight: bold;
+        }
+        .name {
+            font-size: 15px;
+            position: absolute;
+            margin-top: 40px;
+            margin-left: 70px;
+            letter-spacing: -2px;
+            color: #A31919;
+            font-weight: bold;
+        }
+        .leftround4 {
+            height: 50px;
+            width: 50px;
+            border: 4px solid #FFFFFF;
+            border-radius: 50%;
+            background: #FF0066;
+            box-shadow: 1px 1px 1px 1px #ffffff;
+            position: absolute;
+            margin-top: 150px;
+            margin-left: 70px;
+            display: inline-block;
+        }
+        .ineerRound2 {
+            height: 42px;
+            width: 42px;
+            border: 4px solid #FF00FF;
+            border-radius: 50%;
+            position: absolute;
+            opacity: 0.9;
+        }
+        .leftround5 {
+            height: 20px;
+            width: 20px;
+            border: 4px solid #FFFFFF;
+            border-radius: 50%;
+            background: #FF0066;
+            box-shadow: 1px 1px 1px 1px #ffffff;
+            position: absolute;
+            display: block;
+            margin-top: 195px;
+            margin-left: 55px;
+        }
+        .lasttwoContainer {
+            width: 100%;
+            height: 150px;
+            border: 0px none;
+            display: inline-block;
+            margin-top: 100px;
+        }
+        .leftround6 {
+            height: 70px;
+            width: 70px;
+            border: 4px solid #FFFFFF;
+            border-radius: 50%;
+            background: #FF0066;
+            box-shadow: 1px 1px 1px 1px #FFFFFF;
+            position: absolute;
+            margin-top: 50px;
+        }
+        .ineerRound3 {
+            height: 62px;
+            width: 62px;
+            border: 4px solid #FF00FF;
+            border-radius: 50%;
+            position: absolute;
+        }
+        .leftround7 {
+            height: 35px;
+            width: 35px;
+            border: 5px solid #FFFFFF;
+            border-radius: 50%;
+            background: #FF0066;
+            box-shadow: 1px 1px 1px 1px #FFFFFF;
+            position: absolute;
+            display: inline-block;
+            margin-top: 100px;
+            margin-left: 70px;
+        }
+        .rightContainer {
+            width: 330px;
+            height: 100%;
+            border: 0px none;
+            display: inline-block;
+            margin: auto;
+            position: absolute;
+        }
+        .rightround1 {
+            height: 55px;
+            width: 55px;
+            border: 4px solid #FFFFFF;
+            border-radius: 50%;
+            background: #FF0066;
+            position: relative;
+            float: right;
+            margin-right: 10px;
+            margin-top: -35px;
+        }
+        .innerRight1 {
+            height: 47px;
+            width: 47px;
+            border: 4px solid #FF00FF;
+            border-radius: 50%;
+            position: absolute
+        }
+        .logoImage {
+            height: 35px;
+            width: 35px;
+            position: absolute;
+            margin-top: 5px;
+            margin-left: 5px;
+        }
+        .Div1 {
+            width: 100%;
+            height: 40px;
+            border: 0px none;
+            display: block;
+            margin-top: 45px;
+        }
+        .rightround2 {
+            height: 20px;
+            width: 20px;
+            border: 4px solid #ffffff;
+            position: absolute;
+            border-radius: 50%;
+            background: #FF0066;
+            color: white;
+        }
+        .welcome {
+            font-size: 20px;
+            text-transform: uppercase;
+            color: #FF6600;
+            font-weight: bold;
+            margin-left: 30px;
+            margin-top: 5px;
+            letter-spacing: -2px;
+        }
+        .Div2 {
+            width: 100%;
+            height: 100px;
+            border: 0px none;
+            display: block;
+        }
+        .rightround3 {
+            height: 15px;
+            width: 15px;
+            border: 2px solid #8533FF;
+            position: absolute;
+            border-radius: 50%;
+            background: #FF0066;
+            margin-left: 20px;
+        }
+        .innerRight2 {
+            height: 9px;
+            width: 9px;
+            border: 3px solid #ffffff;
+            position: absolute;
+            border-radius: 50%;
+            background: #FF0066;
+        }
+        .innertext2 {
+            font-size: 15px;
+            text-transform: capitalize;
+            color: #FF6600;
+            font-weight: bold;
+            margin-left: 40px;
+        }
+        .innertextContainer {
+            width: 75%;
+            height: 80px;
+            border: 0px none;
+            margin: auto;
+        }
+        .innertext3 {
+            font-size: 15px;
+            font-weight: normal;
+            text-align: left;
+            color: black;
+        }
+        .Div3 {
+            width: 100%;
+            height: 100px;
+            border: 0px none;
+            display: block;
+        }
+        .rightround4 {
+            height: 20px;
+            width: 20px;
+            border: 4px solid #ffffff;
+            position: absolute;
+            border-radius: 50%;
+            background: #FF0066;
+            color: white;
+        }
+        .innertext4 {
+            font-size: 20px;
+            text-transform: uppercase;
+            color: #FF6600;
+            font-weight: bold;
+            margin-left: 30px;
+            letter-spacing: -2px;
+            margin-top: 5px;
+        }
+        .Div4 {
+            width: 100%;
+            height: 50px;
+            border: 0px none;
+            display: block;
+            margin-top: 20px;
+        }
+        .innertext5 {
+            font-size: 17px;
+            margin-left: 30px;
+            position: absolute;
+            word-spacing: 10px;
+        }
+        .innertext6 {
+            font-size: 17px;
+            margin-left: 30px;
+            position: absolute;
+            word-spacing: 10px;
+            margin-left: 170px;
+        }
+        .Div5 {
+            width: 100%;
+            height: 50px;
+            border: 0px none;
+            display: block;
+        }
+        .innertext7 {
+            font-size: 20px;
+            text-transform: uppercase;
+            color: #FF6600;
+            font-weight: bold;
+            margin-left: 30px;
+            letter-spacing: -2px;
+        }
+        .rightround5 {
+            height: 90px;
+            width: 90px;
+            border: 8px solid #FFFFFF;
+            border-radius: 50%;
+            background: url("https://www.zoho.com/crm/images/inventory-discount-models.jpg");
+            background-size: cover;
+            background-position: -7px 10px;
+            position: absolute;
+            margin-left: -10px;
+            margin-top: 60px;
+            display: block;
+        }
+        .image {
+            height: 70px;
+            width: 70px;
+            position: absolute;
+            margin-top: 15px;
+            margin-left: 15px;
+        }
+        .rightround6 {
+            height: 90px;
+            width: 90px;
+            border: 8px solid #FFFFFF;
+            border-radius: 50%;
+            background: url("https://www.zoho.com/wiki/images/widget-branding.gif");
+            background-size: cover;
+            background-position: -5px;
+            position: absolute;
+            display: block;
+            margin-left: 95px;
+            margin-top: 60px;
+        }
+        .rightround7
+        {
+        	 height: 90px;
+            width: 90px;
+            border: 8px solid #FFFFFF;
+            border-radius: 50%;
+            background: url("http://www1.pcmag.com/media/images/228001-zoho-crm-professional-edition.jpg");
+            background-size: cover;
+            background-position: -5px;
+            position: absolute;
+            display: block;
+            float:left;
+            margin-top: 60px;
+            margin-left: 200px;
+        }
+        .endingDiv
+        {
+        	width: 365px;
+        	height: 45px;
+        	border: 0px none;
+        	float:right;
+        	margin-right: 120px;
+        }
+        .endingRound1
+        {
+        	height: 25px;
+        	width: 25px;
+        	border: 3px solid #ffffff;
+        	float: left;
+        	border-radius: 50%;
+        	margin-top: 10px;
+        	background:url("http://www.tuckersfinejewelry.com/pics/leftArrow.png"); 
+        	background-size: cover;
+        }
+        .endingRound2
+        {
+        	height: 25px;
+        	width: 25px;
+        	border: 3px solid #ffffff;
+        	float: right;
+        	border-radius: 50%;
+        	margin-top: 10px;
+        	margin-right: 7px;
+        	background:url("http://www.wpclipart.com/signs_symbol/button/button_direction/direction_arrow_gold_right.png");
+        	background-size: cover;	
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <div class="borderDiv">
+            <div class="mainDiv">
+                <div class="nullDiv"></div>
+                <div class="ContainerDiv">
+                    <!--leftDiv-->
+                    <div class="leftContainer">
+                        <div class="ContainerDiv1">
+                            <div class="rotatetext1">CONTACT</div>
+                        </div>
+                        <div class="ContainerDiv2">
+                            <div class="rotatetext2">CARRIERS</div>
+                        </div>
+                        <div class="ContainerDiv3">
+                            <div class="rotatetext3">ABOUT</div>
+                        </div>
+                        <div class="ContainerDiv4">
+                            <div class="rotatetext4">PORTFOLIO</div>
+                        </div>
+                        <div class="ContainerDiv5">
+                            <div class="rotatetext5">SERVICE</div>
+                        </div>
+                        <div class="leftround1"></div>
+                        <div class="leftround2">
+                            <div class="ineerRound1"></div>
+                        </div>
+                        <div class="leftround3"><span class="website">WEBSITE</span><span class="name">NAME</span>
+                        </div>
+                        <div class="leftround4">
+                            <div class="ineerRound2"></div>
+                        </div>
+                        <div class="leftround5"></div>
+                        <div class=lasttwoContainer>
+                            <div class="leftround6">
+                                <div class="ineerRound3"></div>
+                            </div>
+                            <div class="leftround7"></div>
+                        </div>
+                    </div>
+                    <!--rightDiv-->
+                    <div class="rightContainer">
+                        <div class="rightround1">
+                            <div class="innerRight1">
+                                <img class="logoImage" src="http://www.pd4pic.com/images/house-black-home-icon-blue-outline-symbol-white.png">    </img>
+                            </div>
+                        </div>
+                        <div class="Div1">
+                            <div class="rightround2">01</div>
+                            <div class="welcome">welcome tour website</div>
+                        </div>
+                        <div class="Div2">
+                            <div class="rightround3">
+                                <div class="innerRight2">
+                                </div>
+                            </div>
+                            <span class="innertext2">Lorem Ipsum dolor sit a met</span>
+                            <div class="innertextContainer">
+                                <span class="innertext3">You r the most precious thing in the world. If han in my way I would't let you out of my sight for a moment.</span>
+                            </div>
+                        </div>
+                        <div class="Div3">
+                            <div class="rightround4">02</div>
+                            <span class="innertext4">our featured clients</span>
+                            <div class="Div4">
+                                <span class="innertext5">Shibu    |    Alexis </span>
+                                <span class="innertext6">|    Francis</span>
+                            </div>
+                        </div>
+                        <div class="Div5">
+                            <div class="rightround4">03</div>
+                            <span class="innertext7">latest works</span>
+                        </div>
+                        <div class="rightround5">
+                        </div>
+                        <div class="rightround6">
+                            </div>
+                             <div class="rightround7">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="endingDiv">
+                    	<div class="endingRound1"></div>
+                    	<div class="endingRound2"></div>
+                    </div>
+                </div>
+             </div>
+           </div>
+        </div>
+    </section>
+</body>
+</html>

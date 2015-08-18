@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>popup box</title>
+		<style type="text/css">
+		*
+		{
+			padding: 0;
+			margin: 0;
+		}
+		.mainDiv
+		{
+			width: 100%;
+			height: 700px;
+		}
+		.contentContainer
+		{
+			height: 700px;
+			width: 1165px;
+			margin:0px auto;
+		}
+		#show_window
+		{
+			height: 30px;
+			width: 110px;
+			border: 1px solid;
+			cursor: pointer;
+		}
+		#overlay
+		{
+			display: none;
+			width: 100%;
+			top:0;
+			left: 0;
+			position: fixed;
+			background:transparent;
+			height: 700px;
+			z-index: 1;
+		}
+		.overlay_features
+		{
+			height: 300px;
+			width: 500px;
+			margin: 250px auto;
+		}
+		.prompt_box
+		{
+			background:#3385FF;
+			position: fixed;
+			z-index:1;
+			width: 400px;
+			height: 150px;
+		}
+		#hide_window
+		{
+			height: 30px;
+			width: 30px;
+			float: right;	
+			font-size: 13px;
+			line-height: 29px;
+			background: url('http://images.clipshrine.com/download/wheel/large-cancel-close-button-166.6-10442.png');
+			background-repeat: no-repeat;
+			background-size: 30px 30px;	
+			margin: auto;
+			cursor: pointer;
+		}
+		</style>
+	</head>
+	<body>
+		<div class="mainDiv">
+			<div class="contentContainer">
+				<button id="show_window">Click Here</button>
+				<p>The "Streatham" portrait is an oil painting on panel from the 1590s believed to be a copy of a portrait of Lady Jane Grey dating to her lifetime (c. 1537–54). It shows a three-quarter-length depiction of a young woman in Tudor-period dress holding a prayer book, with the faded inscription "Lady Jayne" or "Lady Iayne" in the upper-left corner. Thought to have been completed as part of a set of paintings of Protestant martyrs, it is in poor condition and damaged, as if it has been attacked. By the early 20th century it was in the possession of a collector in Streatham, London. In December 2005 the portrait was examined by the art dealer Christopher Foley. He saw it as an accurate, though poorly executed, reproduction of a contemporary painting of Jane, had it verified, and on that basis negotiated its sale. The work was acquired by the National Portrait Gallery in London for a rumoured £100,000, a sale of which the historian David Starkey was highly critical, challenging Foley's identifications. As of 2015 it is on display in Room 3 of the National Portrait Gallery. Although of historical interest, the painting is generally considered to be of poor artistic quality. (Full article...)
+				challenging
+			</p>
+			<p>
+				The "Streatham" portrait is an oil painting on panel from the 1590s believed to be a copy of a portrait of Lady Jane Grey dating to her lifetime (c. 1537–54). It shows a three-quarter-length depiction of a young woman in Tudor-period dress holding a prayer book, with the faded inscription "Lady Jayne" or "Lady Iayne" in the upper-left corner. Thought to have been completed as part of a set of paintings of Protestant martyrs, it is in poor condition and damaged, as if it has been attacked. By the early 20th century it was in the possession of a collector in Streatham, London. In December 2005 the portrait was examined by the art dealer Christopher Foley. He saw it as an accurate, though poorly executed, reproduction of a contemporary painting of Jane, had it verified, and on that basis negotiated its sale. The work was acquired by the National Portrait Gallery in London for a rumoured £100,000, a sale of which the historian David Starkey was highly critical, challenging Foley's identifications. As of 2015 it is on display in Room 3 of the National Portrait Gallery. Although of historical interest, the painting is generally considered to be of poor artistic quality. (Full article...)
+				challenging
+				</p>
+				<p>
+				The "Streatham" portrait is an oil painting on panel from the 1590s believed to be a copy of a portrait of Lady Jane Grey dating to her lifetime (c. 1537–54). It shows a three-quarter-length depiction of a young woman in Tudor-period dress holding a prayer book, with the faded inscription "Lady Jayne" or "Lady Iayne" in the upper-left corner. Thought to have been completed as part of a set of paintings of Protestant martyrs, it is in poor condition and damaged, as if it has been attacked. By the early 20th century it was in the possession of a collector in Streatham, London. In December 2005 the portrait was examined by the art dealer Christopher Foley. He saw it as an accurate, though poorly executed, reproduction of a contemporary painting of Jane, had it verified, and on that basis negotiated its sale. The work was acquired by the National Portrait Gallery in London for a rumoured £100,000, a sale of which the historian David Starkey was highly critical, challenging Foley's identifications. As of 2015 it is on display in Room 3 of the National Portrait Gallery. Although of historical interest, the painting is generally considered to be of poor artistic quality. (Full article...)
+				challenging
+			</p>
+			<p>
+				The "Streatham" portrait is an oil painting on panel from the 1590s believed to be a copy of a portrait of Lady Jane Grey dating to her lifetime (c. 1537–54). It shows a three-quarter-length depiction of a young woman in Tudor-period dress holding a prayer book, with the faded inscription "Lady Jayne" or "Lady Iayne" in the upper-left corner. Thought to have been completed as part of a set of paintings of Protestant martyrs, it is in poor condition and damaged, as if it has been attacked. By the early 20th century it was in the possession of a collector in Streatham, London. In December 2005 the portrait was examined by the art dealer Christopher Foley. He saw it as an accurate, though poorly executed, reproduction of a contemporary painting of Jane, had it verified, and on that basis negotiated its sale. The work was acquired by the National Portrait Gallery in London for a rumoured £100,000, a sale of which the histori.
+		</p>
+			</div>
+			<div id="overlay">
+				<div class="overlay_features">
+					<div class="prompt_box">
+						<div id="hide_window"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			$('#show_window').click(function(){
+				$('#overlay').show();
+				$('.overlay_features').show();
+				$('.prompt_box').show();
+			})
+			$('#hide_window').click(function(){
+				$('.prompt_box').hide();
+				$('#overlay').hide();
+			})
+		})
+		</script>
+<html>

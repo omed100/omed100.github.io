@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	</head>
+	<body>
+	<script>
+	var arr = [1, 2, 3, 2, 3, 4, 4, 4, 4, 5,5, 7];
+	var sorted_arr = arr.sort(); 
+     var results = [];
+	for (var i = 0; i < arr.length - 1; i++) {
+    	if (sorted_arr[i + 1] == sorted_arr[i])
+	    	 {
+		   results.push(sorted_arr[i]);
+	   	 }
+	}
+
+	alert(results);
+
+	</script>
+	</body>
+</html>
+

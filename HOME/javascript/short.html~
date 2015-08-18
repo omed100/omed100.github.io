@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>
+			Discount
+		</title>
+		<style type="text/css">
+			body
+			{
+				margin: 0;
+				padding: 0;
+				font-family: 'segoe UI'
+			}
+			div
+			{
+				margin:20px auto;
+			}
+		</style>
+	</head>
+	<body>
+		<div>
+			<input type="text" id="num1" />
+			<input type="text" id="num2" />
+			<input type="text" id="num3" />
+			<input type="submit" id="submit" value="Check Here" onclick="numUnique()" />
+		</div>
+		<div id="result"></div>
+		<script type="text/javascript">
+			function numUnique(){
+					var result = document.getElementById("result");
+					var x = parseInt(document.getElementById("num1").value);
+					var y = parseInt(document.getElementById("num2").value);
+					var z = parseInt(document.getElementById("num3").value);
+
+					if (((x<y)&&(y<z)) || ((x<=y)&& (y<=z)))
+					{
+						result.innerHTML = x+","+y+","+z+ " in order"
+					}
+
+					else if (((x>y)&&(y>z)) || ((x>=y)&& (y>=z)))
+					{
+						result.innerHTML = x+","+y+","+z+ " in order"
+					}
+
+					else
+					{
+						result.innerHTML = x+","+y+","+z+ " not in order";
+					}
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,207 @@
+<DOCTYPE html>
+<html>
+	<head>
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+				font: bold 14px Arial, sans-serif;
+			}
+
+		body
+			 {
+				height: 100%;
+				background: radial-gradient( #fff 30%, #B88AE6);
+				background-size: cover;
+			}
+			#calculator 	
+			{
+				width: 390px;
+				height: auto;
+				margin: 100px auto;
+				padding: 20px 20px 9px;
+				background: linear-gradient(#660033, #9900CC);
+				border-radius: 3px;
+				box-shadow: 0px 6px #A319A3, 0px 10px 20px rgba(0, 0, 0, 0.2);
+			}	
+
+			.top button.clear
+			 {
+				float: left;
+			}
+
+			.top span.screen 
+			{
+				height: 50px;
+				width: 240px;
+				float: left;
+				padding: 0 10px;
+				background: rgba(225, 225, 225, 0.5);
+				border-radius: 3px;
+				box-shadow: inset 0px 4px rgba(0, 0, 0, 0.2);
+				font-size: 17px;
+				line-height: 40px;
+				color: white;
+				text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+				text-align: right;
+				letter-spacing: 1px;
+
+			}
+
+			.keys,.top
+			 {
+			 	overflow: hidden;
+			 }
+			.keys button,.top button.clear 
+			{
+				float: left;
+				position: relative;
+				top: 0;
+				cursor: pointer;
+				width: 76px;
+				height: 46px;
+				background: white;
+				border-radius: 3px;
+				box-shadow: 0px 4px rgba(0, 0, 0, 0.2);
+				margin: 0 7px 11px 0;
+				color: #888;
+				line-height: 36px;
+				text-align: center;
+				user-select: none;
+				transition: all 0.2s ease;
+				font-size: 30px;
+			}
+
+			.keys button.operator 
+			{
+				background: #FFF0F5;
+				margin-right: 0;
+			}
+
+			.keys button.equal
+			 {
+				background: #f1ff92;
+				box-shadow: 0px 4px #9da853;
+				color: #888e5f;
+			}	
+
+			.top button.clear 
+			{
+				background: #ff9fa8;
+				box-shadow: 0px 4px #ff7c87;
+				color: white;
+			}
+
+			.keys button:hover 
+			{
+				background: #9c89f6;
+				box-shadow: 0px 4px #6b54d3;
+				color: white;
+			}
+
+			.keys button.equal:hover
+			{
+				background: #abb850;
+				box-shadow: 0px 4px #717a33;
+				color: #ffffff;
+			}
+
+			.top button.clear:hover 
+			{
+				background: #f68991;
+				box-shadow: 0px 4px #d3545d;
+				color: white;
+			}
+			.keys button:active 
+			{
+				box-shadow: 0px 0px #0000FF;
+			}
+
+			.keys button.equal:active
+			 {
+				box-shadow: 0px 0px #6b54d3;
+			}
+
+			.top button.clear:active 
+			{
+				box-shadow: 0px 0px #d3545d;
+			}
+			
+		</style>
+
+	</head>
+	<body>
+		<div id="calculator">
+			<div class="top">
+				<button class="clear" onClick="clearFunctoion()">C</button>
+				<span class="Screen" id="rslt"></span>
+			</div>
+			<div class="keys">
+				<button value="7" onClick="calculateOptr(this)">7</button>
+				<button value="8" onClick="calculateOptr(this)">8</button>
+				<button value="9" onClick="calculateOptr(this)">9</button>
+				<button value="+" onClick="calculateOptr(this)" class="operator">+</button>
+				<button value="4" onClick="calculateOptr(this)">4</button>
+				<button value="5" onClick="calculateOptr(this)">5</button>
+				<button value="6" onClick="calculateOptr(this)">6</button>
+				<button value="-" onClick="calculateOptr(this)" class="operator">-</button>
+				<button value="1" onClick="calculateOptr(this)">1</button>
+				<button value="2" onClick="calculateOptr(this)">2</button>
+				<button value="3" onClick="calculateOptr(this)">3</button>
+				<button value="/" onClick="calculateOptr(this)" class="operator">/</button>
+				<button value="0" onClick="calculateOptr(this)">0</button>
+				<button value="." onClick="calculateOptr(this)">.</button>
+				<button value="=" class="equal" onClick="calculateOptr(this)">=</button>
+				<button value="x" class="operator" onClick="calculateOptr(this)">x</button>
+				
+			</div>
+		</div>
+	</body>
+<script type="text/javascript">
+				//alert("hi");
+				var count=0,num1,num2,opr;
+				function calculateOptr(x){
+					var res=document.getElementById("rslt");
+						if ((x.value=="+")||(x.value=="-")||(x.value=="*")||(x.value=="/")) {
+							res.innerHTML="";
+							opr=x.value;
+							count=1;
+						}
+						else if (x.value=="="){
+							res.innerHTML=operation(+num1,+num2,opr);
+							count=2;
+						}
+						else{
+							if (count==0) {
+									res.innerHTML+=x.value;
+									num1=res.innerHTML;
+							}
+							else if (count==1) {
+									res.innerHTML+=x.value;
+									num2=res.innerHTML;
+							}
+						}
+				}
+				function operation(x,y,opr){
+					if (opr=="+") {
+						return x+y;
+					}
+					else if (opr=="-") {
+						return x-y;
+					}
+					else if (opr=="*") {
+						return x*y;
+					}
+					else {
+						return x/y;
+					}
+				
+
+				}
+				function clearFunctoion(){
+
+					res.innerHTML="";
+				}
+				</script>
+</html>

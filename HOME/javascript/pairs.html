@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>
+			Discount
+		</title>
+		<style type="text/css">
+			body
+			{
+				margin: 0;
+				padding: 0;
+				font-family: 'segoe UI'
+			}
+		</style>
+	</headv
+		<div>
+			<input type="text" id="num1" />
+			<input type="text" id="num2" />
+			<input type="text" id="num3" />
+			<input type="text" id="num4" />
+			<input type="submit" id="submit" value="Check Here" onclick="numUnique()" />
+		</div>
+		<div id="result"></div>
+		<script type="text/javascript">
+			function numUnique(){
+					var result = document.getElementById("result");
+					var a = parseInt(document.getElementById("num1").value);
+					var b = parseInt(document.getElementById("num2").value);
+					var x = parseInt(document.getElementById("num3").value);
+					var y = parseInt(document.getElementById("num4").value);
+
+					if ((((a==x)&&(a!=y)) && (b==y)&&(b!=x))  || (((a!=x)&&(a==y)) && (b==x)&&(b!=y)))
+					{
+						alert("Two pairs")
+					}
+
+					else
+					{
+						alert("not Two pairs")
+					}
+			}
+		</script>
+	</body>
+</html>

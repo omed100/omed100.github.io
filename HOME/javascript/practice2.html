@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+			<style type="text/css">
+					#result
+					{
+
+					border: 10px; 
+					border-radius: 50%;
+					border-style: solid;
+					border-color: #FF0066 #66CCFF #E62E00 #009900;
+					opacity: 0;
+					transition:all ease 7s;
+					}
+					#result:hover
+
+					{
+						transform:rotate(360deg);
+						-webkit-transform:rotate(360deg);
+					}
+			</style>
+	</head>
+	<body>
+		<div>
+			<input type="text" id="num1">
+			<input type="text" id="num2"><br>
+			<button onclick="Rectangle()">Get Shape</button>
+		</div>
+		<div id="result">
+		</div>
+			<script type="text/javascript">
+			function Rectangle()
+				{	
+				var x = document.getElementById("num1").value
+				var y =document.getElementById("num2").value
+				var z = document.getElementById("result");
+				z.style.height = y+"px";
+				z.style.width = x+"px";
+				z.style.opacity=1;
+			}
+			</script>
+	</body>
+</html>

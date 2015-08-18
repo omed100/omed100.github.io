@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>
+			Biggest Number in a Array
+		</title>
+		<style type="text/css">
+		
+		</style>
+	</head>
+		<body>
+			<input type="text" id = "txt1">
+			<input type = "button" value="submit" onclick="getValue()"/><br>
+			<div id = "text2"></div>
+			<script type="text/javascript">
+			var arr= [];
+			count = 0;
+			function getValue()
+			{
+				var x = document.getElementById('txt1').value;
+				for (var i = 0; i < x.length; i++) {
+					arr[count]=x[i];
+					count++;
+				}
+				arr.push(arr);
+				count=0;
+				var bigOne = arr[0];
+				for (var i = 0; i < arr.length; i++) {
+					if(arr[i]>bigOne)
+					{
+						bigOne= arr[i];
+					}
+
+				}
+				document.getElementById("text2").innerHTML=bigOne;	
+			}
+			
+			
+			</script>
+		</body>
+</html>

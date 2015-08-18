@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style type="text/css">
+		*{
+			padding: 0px;
+			margin: 0px;
+		}
+		
+		.dice{
+			height: 100px;
+			width: 100px;
+			border: 2px solid;
+			margin: 5px;
+			background-color: gray;
+			text-align: center;
+			display: inline-block;
+			font-size: 80px;
+			line-height: -40px;
+			float: left;
+			color: red;
+			border-radius: 20%;
+		}
+		#status
+		{
+
+			color: red;
+		}
+		.btn
+		{
+			height: 60px;
+			width: 110px;
+			background-color: blue;
+			font-size: 20px;
+			line-height: 20px;
+			margin-top: 5px;
+		}
+		</style>
+	</head>
+			<div>
+			<div class="dice" id="dice1">0</div>
+			<div class="dice" id="dice2">0</div>
+			<button onClick="rollDice()" class="btn">Roll Now</button>
+			<h1 id="status" style="clear:left;"></h1>
+		</body>
+		<script type="text/javascript">
+			function rollDice() {
+				var dice1 = document.getElementById("dice1");
+				var dice2 = document.getElementById("dice2");
+				var status = document.getElementById("status");
+				var d1 = Math.floor(Math.random() * 6) + 1;
+				var d2 = Math.floor(Math.random() * 6) + 1;
+				var DiceTatal = d1 + d2;
+				dice1.innerHTML = d1;
+				dice2.innerHTML = d2;
+				status.innerHTML= "You Rolled" + DiceTatal +".";
+				if (d1 == d2) {
+					status.innerHTML +="DOUBLES! You Get A Free Turn!!";
+				 }
+		}
+		</script>
+</html>

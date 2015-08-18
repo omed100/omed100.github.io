@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<link rel="icon" href="video/Home-icon.png" type="image/x-icon" />
+		<title>Home Page</title>
+		<link rel="stylesheet" type="text/css" href="css/homemain.css">
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+		<script type="text/javascript" src="js/homemain.js"></script>
+		<script type="text/javascript" src="js/jQueryUI.js"></script>
+  		<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Tangerine">
+	</head>
+	<body>
+		<div class="main_Div">
+			<div id="overlay_dialog">
+			</div>
+			<div class="body_feature">
+				<div class="header_container" id="headerNav">
+					<div class="features_div_header" id="feature_id">
+						<div class="name_container" id="name_id">
+							<span class="omed">Omed Ali</span>
+							<span class="webdesign">ZU Trainee</span>
+						</div>
+						<div class="button_container" id="button_header">
+							<ul>
+								<li><a href="#" onclick="return false;" onmousedown="autoscrollTo('home');">
+									Home</a></li>
+								<li><a href="#" onclick="return false;" onmousedown="autoscrollTo('myworks');">
+									MyWorks</a></li>
+								<li><a href="#" onclick="return false;" onmousedown="autoscrollTo('aboutme');">
+									About Me</a></li>
+								<li><a href="#" onclick="return false;" onmousedown="autoscrollTo('contavtme');">
+									Contact Me</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			<div id="home" class="contentbox1">
+				<div class="home_initial">
+						<div class="myname_container">
+							<div class="name_div">
+								<p class="hi_iam">Hi..! I am</p>
+								<p class="_omed_ali">
+									OMED ALI
+								</p>
+								<p class="_designer">ZU Trainee
+								
+								</p>
+							</div>
+						</div>
+						<div class="welcom_container">
+							<p>
+								<span class="welcome_span">WELCOME TO MY</span>
+								<div class="homepage_photo"></div>
+							</p>
+							<p>
+								<canvas id="myCanvas"></canvas>
+							</p>
+							<p>
+								<div class="above_link_container">
+									<!-- <ul>
+										<li class="zoho_link"><a href="#" target="_blank"></a></li>
+										<li class="g_link"><a href="#"></a></li>
+										<li><a href="#"></a></li>
+										<li><a href="#"></a></li>
+										<li><a href="#"></a></li>
+									</ul> -->
+								</div>
+							</p>
+						</div>
+				</div>
+			</div>
+			<div id="myworks" class="contentbox2">
+				<div class="work_container">
+					<div class="bar_div">
+						<div class="bar_pos1"></div>
+						<div class="bar_pos2"></div>
+						<div class="bar_pos3"></div>
+						<div class="bar_pos4"></div>
+						<div class="bar_pos5"></div>
+					</div>
+					<div class="work_features_buttn">
+						<input type="button" class="view_buttn" onclick="return false;" value="VIEW MY WORKS HERE">
+					</div>
+					<div class="mywork_linkcontainer">
+						<ul>
+							<li>
+								<div class="indiacator"></div>
+								<div class="javascript_link"></div>
+							</li>
+							<li>
+								<div class="indiacator"></div>
+								<div class="jquery_link"></div>
+							</li>
+							<li>
+								<div class="indiacator"></div>
+								<div class="java_link"></div>
+							</li>
+							<li>
+								<div class="indiacator"></div>
+								<div class="project_link" onclick="Alert.box();"></div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div id="prompt_box">
+					<div id="linkcontainer">
+						<ul>
+							<li>
+								<div class="image_java"></div>
+								<a href="http://192.168.22.93:8080/Project/ContactManagar.html" target="_blank">JAVA Project</a></li>
+							<li>
+								<div class="image_java"></div>
+								<a href="http://192.168.22.93:8080/python/Ebook.html" target="_blank">PYTHON Project</a></li>
+						</ul>
+					</div>
+					<div id="close_buttn"></div>
+				</div>
+			</div>
+			<div id="aboutme" class="contentbox3">
+				<div class="myfeature_container" id="feature_id">
+					<div class="about_me">
+						<div class="about_me_container">ABOUT ME</div>
+					</div>
+					<div class="left_feature">
+						<div class="myimage"></div>
+						<div class="simple_feature">
+							<span class="hi-im">Hi..!I M</span>
+							<span class="omed-ali">Omed Ali</span><br>
+							<span class="like">WEB Develop & Desinning are my favourite work.!</span>
+						</div>
+					</div>
+					<div class="right_feature">
+						<ul>
+							<li>&#187; Hi, my name is Omed Ali.</li>
+							<li>&#187; I m from Assam.</li>
+							<li>&#187; Currently I m studing at Zoho University(Batch27).</li>
+							<li>&#187; My ZOHO mail ID is omed.ali@zohocorp.com.</li>
+							<li>&#187; My Mobile No.9962157484.</li>
+							<li>&#187; I have been studying here since 8 months.</li>
+							<li>&#187; I have finished 8 months at Zoho University as ZU Trainee.</li>
+							<li>&#187; I m going to submit my works those which i have done at ZU.</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div id="contavtme" class="contentbox4">
+				<div class="contact_me_container">
+						<div class="contact_me">CONTACT ME</div>
+							<div class="form_container">
+							 <div class="left_contact">
+								<p class="get_touch_span">
+									@I/GET IN TOUCH
+								</p>
+								<p class="omed_approachable">
+									I m very approachable and would like to speak to you.</br>
+									Feel free to call,send me an email,Tweet us or simply </br>
+									complete the form and press send message button.	
+								</p>
+								<p class="contact_link">
+									<div class="link_container_last">
+										<ul>
+											<li>
+												<div class="call_logo"></div>
+												<div class="contact_feature">9962157484</div>
+											</li>
+											<li>
+												<div class="zoho_logo"></div>
+												<div class="contact_feature2">omed.ali@zohocorp.com</div>
+											</li>
+											 <li>
+												<div class="gmail_logo"></div>
+												<div class="contact_feature3">meheboobkhan123@gmail.com</div>
+											</li>
+											<li>
+												<div class="youtube_logo"></div>
+												<div class="contact_feature4">youtube.com/meheboobkhan123@gmail.com</div>
+											</li>
+											<li>
+												<div class="facebook_logo"></div>
+												<div class="contact_feature4">facebook.com/meheboobkhan123@gmail.com</div>
+											</li> 
+										</ul>
+									</div>
+								</p>					
+							</div>
+							<div class="right_contact">
+							<form>
+								<p class="send_me_message">@2/SEND ME A MESSAGE</p>
+								<p>
+									<input type="text" name="name" id="name" placeholder="YOUR NAME"/>
+								</p>
+								<p>
+									<input type="email" name="email" id="email" placeholder="EMAIL ADDESS"/>
+								</p>
+								<p>
+									<input type="text" name="mobile" id="mobile" placeholder="MOBILE"/>
+								</p>
+								<p>
+									<textarea name="message" placeholder="YOUR MESSAGE" id="message"></textarea>
+								</p>
+								<p>
+									<input type="submit" class="send_button" value="SEND MESSAGE" onclick="return false;">
+								</p> 
+						</form>
+						</div> 
+					</div>
+					<div class="policy_conyainer">
+
+						<p class="home_conainer">
+
+							<a href="#" onclick="return false;" onmousedown="resetAutoscrollTo('home');">&#169;2015,My Homepage</a>
+
+							</p>
+						<p>
+							<div class="home_logo" id="gohome" onmousedown="resetAutoscrollTo('home');"></div>
+						</p> 
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		var scrollY =0;
+		var distance = 40;
+		var speed = 25;
+
+		function autoscrollTo (el) 
+		{
+			var currentY = window.pageYOffset;
+			var targetY =document.getElementById(el).offsetTop;
+			var bodyHeight = document.body.offsetHeight;
+			var ypos =currentY+window.innerHeight;
+			var animator = setTimeout('autoscrollTo(\''+el+'\')',speed);
+			if(ypos>bodyHeight)
+			{
+				clearTimeout(animator);
+			}
+			else
+			{
+				if(currentY<targetY-distance)
+				{
+					scrollY = currentY+distance;
+					window.scroll(0,scrollY);
+				}	
+				else
+				{
+					clearTimeout(animator);
+				}
+			}
+		}
+		function resetAutoscrollTo(el)
+		{
+			var currentY = window.pageYOffset;
+			var targetY =document.getElementById(el).offsetTop;
+			var bodyHeight = document.body.offsetHeight;
+			var ypos =currentY+window.innerHeight;
+			var animator = setTimeout('resetAutoscrollTo(\''+el+'\')',speed);
+			if(currentY>targetY)
+			{
+				scrollY = currentY-distance;
+				window.scroll(0,scrollY);
+			}
+			else
+			{
+				clearTimeout(animator);
+			}
+		}
+
+  var canvas = document.getElementById('myCanvas');
+  var context = canvas.getContext('2d');
+
+  context.beginPath();
+  context.moveTo(130, 160);
+  context.lineTo(200, 10);
+  context.strokeStyle = 'rgb(102, 194, 194)';
+  context.lineWidth = 5;
+  context.stroke();
+  
+  context.beginPath();
+  context.moveTo(100, 160);
+  context.lineTo(20, 10);
+  context.strokeStyle = 'rgb(102, 194, 194)';
+  context.lineWidth = 5;
+  context.stroke();
+</script>
+</html>

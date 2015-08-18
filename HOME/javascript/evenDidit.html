@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head></head>
+	<body>
+	<div>Find even digits from given digit</div>
+		<input id="number">
+		<button onClick="evenDigits()">Submit</button>
+		<div id="result"></div>
+		<script type="text/javascript">
+		function evenDigits(){
+			var x = document.getElementById("number").value;
+			var result = document.getElementById("result");
+			var a = 0;
+			
+			var even = new Array();
+
+			while(x>0)
+			{
+				var q = Math.floor(x/10);
+				var r = x%10;
+				var x = q;
+
+				even.push(r)
+
+			}
+
+			for (var i = 0; i < even.length; i++) 
+			{
+				if(even[i]%2==0)
+				{
+					result.innerHTML += even[i]
+				}
+			};
+
+		}
+		document.getElementById("result").innerHTML="Even:-"+even;
+			
+		</script>
+	</body>
+</html>

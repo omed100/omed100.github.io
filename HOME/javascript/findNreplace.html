@@ -1,0 +1,84 @@
+<html>
+	<head>
+			<style type="text/css">
+			*{
+				padding: 0px;
+				margin: 0px;
+			}
+			.div1
+			{
+				width: 400px;
+				height: 400px;
+				margin: 30px auto;
+			}
+			textarea
+			{
+				height: 200px;
+				width: 400px;
+				border: 3px solid;
+				font-size: 20px;
+			}
+			#input2
+			{
+				height: 30px;
+				width: 200px;
+				border: 3px solid;
+				margin-top: 10px;
+			}
+			#input3
+			{
+				height: 30px;
+				width: 200px;
+				border: 3px solid;
+				margin-top: 10px;
+			}
+			</style>
+	</head>
+	<body>
+		<div class="div1">
+			<textarea id="input1"></textarea> <br>
+
+			<input type="text" id="input2" placeholder="Find">
+
+			<input type="text" id="input3" placeholder="Replace">
+			<button onclick="getData()">Replace</button>
+		</div>
+			<script type="text/javascript">
+
+		
+			function getData() 
+			{
+				var a = document.getElementById('input1').value;
+				var find = document.getElementById('input2').value;
+				var Replace = document.getElementById('input3').value;
+				var maindata = a.split(' ');
+
+				var dataFound = false;
+
+				for (var i = 0; i < maindata.length; i++) 
+				{
+					if (find == maindata[i])
+					{
+						maindata[i] = Replace;
+						dataFound = true;
+					}
+				};
+
+				if (dataFound==false) 
+				{
+					alert('Data not found');
+					return;
+				};
+				
+				 document.getElementById('input1').value = maindata; 
+
+				for(var i=0; i<maindata.length; i++)
+				{
+				document.getElementById("input1").innerHTML+='';
+				}
+				maindata=[];
+			}
+
+			</script>
+	</body>
+</html>

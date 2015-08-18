@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<head>
+			<style type="text/css">
+			.contentbox
+			{
+				height: 600px;
+				width: 100%;
+				border: 1px solid;
+				display: block;
+			}
+			</style>
+	</head>
+	<body>
+		<div class="main_Div">
+			< div>
+				<h4 id="myheading">Autoscroll It Now</h4>
+				<a href="#" onclick="return false;" onmousedown="autoscrollTo('details');">Scrool1</a><br>
+				<a href="#" onclick="return false;" onmousedown="autoscrollTo('div2');">Scrool2</a><br>
+				<a href="#" onclick="return false;" onmousedown="autoscrollTo('div3');">Scrool3</a><br>
+				<a href="#" onclick="return false;" onmousedown="autoscrollTo('div4');">Scrool4</a>
+			</div>
+			<div id="details" class="contentbox">div 1 contents goes here....................</div>
+			<a href="#" onclick="return false;" onmousedown="resetAutoscrollTo('myheading');">Go Back</a>
+			<div id="div2" class="contentbox">div 2 contents goes here.....................</div>
+			<a href="#" onclick="return false;" onmousedown="resetAutoscrollTo('myheading');">Go Back</a>
+			<div id="div3" class="contentbox">div 3 contents goes here......................</div>
+			<a href="#" onclick="return false;" onmousedown="resetAutoscrollTo('myheading');">Go Back</a>
+			<div id="div4" class="contentbox">div 4 contents goes here.......................</div>
+			<a href="#" onclick="return false;" onmousedown="resetAutoscrollTo('myheading');">Go Back</a> -->
+		</div>
+	</body>
+	<script type="text/javascript">
+		var scrollY =0;
+		var distance = 40;
+		var speed = 25;
+
+		function autoscrollTo (el) 
+		{
+			var currentY = window.pageYOffset;
+			var targetY =document.getElementById(el).offsetTop;
+			var bodyHeight = document.body.offsetHeight;
+			var ypos =currentY+window.innerHeight;
+			var animator = setTimeout('autoscrollTo(\''+el+'\')',speed);
+
+			if(ypos>bodyHeight)
+			{
+				clearTimeout(animator);
+			}
+			else
+			{
+				if(currentY<targetY-distance)
+				{
+					scrollY = currentY+distance;
+					window.scroll(0,scrollY);
+				}
+				else
+				{
+					clearTimeout(animator);
+				}
+			}
+		}
+
+		function resetAutoscrollTo(el)
+		{
+			var currentY = window.pageYOffset;
+			var targetY =document.getElementById(el).offsetTop;
+			var bodyHeight = document.body.offsetHeight;
+			var ypos =currentY+window.innerHeight;
+			var animator = setTimeout('resetAutoscrollTo(\''+el+'\')',speed);
+			if(currentY>targetY)
+			{
+				scrollY = currentY-distance;
+				window.scroll(0,scrollY)
+			}
+			else
+			{
+				clearTimeout(animator);
+			}
+		}
+	</script>
+</html>

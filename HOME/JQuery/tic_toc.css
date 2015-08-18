@@ -1,0 +1,9 @@
+body{
+	background: #323232;
+}
+#game_wrap{
+	height: 455px;
+	width: 450px;
+	border: 1px solid red;
+	margin:20px auto;
+}

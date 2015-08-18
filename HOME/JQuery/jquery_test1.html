@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset = "utf-8">
+		<title>JQuery Test</title>
+		<style type="text/css">
+		P{
+			margin: 20px;
+			font-size: 15px;
+		}
+		.initial
+		{
+			background-color: red;
+			font-size: 20px;
+		}
+		.next
+		{
+			background-color:purple;
+			font-size: 10px;
+		}
+
+		</style>
+		<script type="text/javascript" src="jquery1.js"></script>
+	</head>
+	<body>
+		<!--<script> //changing the button name
+			$(document).ready(function(){
+				$("button.button_view").html("I M Here")
+			});
+
+		</script>
+		<body>
+			<button class="button_view">click Here</button>-->
+			<!--<script> //showing the hidden button
+			$(document).ready(function(){
+			var hidden_box = $("#message_Containr");
+			$("#button_container button").on("click",function(event){
+				hidden_box.show();
+			});
+			});
+			Here is a hidden div that goes by id "message-container"
+			<div id="message_Containr" style="display:none;color:blue;"> I was hidden first</div>
+			<div id="button_container">
+				Any of this button will display the hide button
+				<button>First_Submit</button>
+				<button>Second_Submit</button>
+				<button>Third_Submit</button>
+			</div>-->
+			<!--<a href = "http://jquery.com">JQuery</a>
+			<script>
+				$(document).ready(function(){
+					$("a").click(function(event){
+						alert("This link is learning for JQuery");
+						event.preventDefault();
+					})
+				})
+			</script>-->
+			<script>
+			//addClass&removeClass
+			$(document).ready(function(){
+				$("p").last().on("mouseover",function(){$(this).addClass("initial next")});
+				$("p").last().on("mouseout",function(){$(this).removeClass("next")});
+			});
+			</script>
+			<p>JQuery is a good programing language</p>
+			<p>It is easy to lern</p>
+			<p>I m going to learn jquery</p>
+		</body>
+</htm>

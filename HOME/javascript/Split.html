@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	</head>
+	<body>
+		<input type ="text">
+		<input type="button" value="submit" onclick="getValues()"><br>
+		<input type="text" id="result">
+		<script>
+		function getValues(){
+			var x = document.getElementsByTagName('input')[0].value;
+			var y = prompt("enter the number");
+			var z =[];
+			var count=0;
+			for (var i = 0; i < x.length; i++) {
+				if(y<x[i])
+				{
+					z[j]=x[i];
+					count++;
+				}
+			}
+			document.getElementById("result").value = z;
+		}
+		</script>
+	</body>
+</html>

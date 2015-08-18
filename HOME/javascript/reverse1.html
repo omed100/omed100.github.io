@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head></head>
+	<body>
+			<input type = "text" id= "input1">
+			<button onclick="reverse(event)">Reverse</button>
+			<button onclick="origin(this)">Palindrome</button>
+			<div id= "result"></div>
+			<script type="text/javascript">
+				function reverse(s) {
+				var s= document.getElementById('input1').value;
+ 				var a = '';
+ 				for (var i = s.length - 1; i >= 0; i--)
+    					a += s[i];
+  					document.getElementById("result").innerHTML = a;
+				}
+				function origin()
+				{
+					var d= document.getElementById('input1').value;
+					
+				}
+
+			</script>
+	</body>
+</html>

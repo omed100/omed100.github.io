@@ -1,0 +1,198 @@
+<DOCTYPE html>
+<htmt>
+	<head>
+		<style>
+			*{
+				padding: 0;
+				margin: 0;
+			}
+			body
+			{
+				background-image:linear-gradient(#663300,#400040);
+				background-size: cover;
+			}
+			#main{
+				width: 100%;
+				height: auto;
+			}
+			#outer
+			{
+				width: 600px;
+				height: 400px;
+				border: 20px solid #AD5C85;
+				margin: 40px auto;
+				position: relative;
+				border-radius: 10%;
+				border-left-width: 50px;
+				border-right-width: 50px;
+				box-shadow: 8px 15px 15px #440000;
+			}
+			#inner
+			{
+				width:600px;
+				height: 400px;
+				/*border: 1px solid;*/
+				position: absolute;
+			}
+			#left_button
+			{
+				height: 50px;
+				width: 50px;
+				position: absolute;
+				background-image:url("/home/test/Batch 27/Omed/Web Programing/JQuery/Test/left.png");
+				background-size: cover;
+				background-repeat: no repeat;
+				margin-top: 180px;
+				margin-left: -50px;
+				float: left;
+
+			}
+			#right_button
+			{
+				height: 50px;
+				width: 50px;
+				position: absolute;
+				background-image:url("/home/test/Batch 27/Omed/Web Programing/JQuery/Test/right.png");
+				background-size: cover;
+				background-repeat: no repeat;
+				margin-left: 600px;
+				margin-top: 180px;
+			}
+			#effect_div
+			{
+				height:100px;
+				width: 220px;
+				position: absolute;
+				margin: 60px 30px;
+			}
+			select
+			{
+				height: 30px;
+				width: 100px;
+				font-size: 15px;
+			}
+			#select_effect
+			{
+				height: 30px;
+				width: 100px;
+				font-size: 15px;
+			}
+			img{
+				width: 600px;
+				height: 400px;
+				float: left;
+				display: inline-block;
+				position: absolute;
+				float: left;
+				overflow: hidden;
+			}
+			#start
+			{
+
+				height: 50px;
+				width: 200px;
+				font-size: 15px;
+				margin-left: 550px;
+				margin-top: 20px;
+				font-size: 40px;
+			}
+		</style>
+	</head>
+		<script type="text/javascript" src="jquery1.js"></script>
+		<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+ 		 <script src="http://code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
+ 		 <script>
+ 		 var pic = [];
+ 		 for (i = 1; i <=16; i++) {
+ 		 pic[i] ='<img class="img_src" src=images/image'+i+'.jpg>'
+ 		 }
+ 		  var n = 0;
+ 		 // alert(pic)
+ 		$(document).ready(function(){
+				$("#right_button").click(function(){
+					if(n==16){
+						n=0;
+					}
+					else{
+						n+=1;
+					}
+					$("#inner").html(pic[n]);
+					$('#inner').animate({
+						height:'100px',
+						width:'100px',
+						opacity:'0'
+
+					},3000);
+					$("#inner").animate({
+						height:'400px',
+						width:'600px',
+						opacity:'1'
+					},1000);
+						
+				})
+				$("#left_button").click(function(){
+					if(n==0){
+						n=16;
+					}
+					else
+					{
+						n -=1;
+					}
+					$("#inner").html(pic[n]);
+					var div = $("#inner");
+					div.animate({height:'300px',opacity:'0'},"slow");
+				    div.animate({width:'300px',opacity:'0.8'},"slow");
+				    div.animate({height:'100px',opacity:'0.4'},"slow");
+				    div.animate({width:'600px',height:'400px',opacity:'0.8'},2000);
+
+
+			});
+				$("#right_button").hide();
+				$("#left_button").hide();		
+		$(document).mousemove(function(e){
+			//console.log(e.pageX);
+			if(e.pageX>300 && e.pageX<350)
+			{
+				$("#left_button").show();
+			}
+			else if((e.pageX>950)&&(e.pageX<1000))
+			{
+				$("#right_button").show();
+			}
+			else
+			{
+				$("#right_button").hide();
+				$("#left_button").hide();
+			}
+		});
+		$("#start").click(function(){ccc()});
+
+		 function ccc(){
+				if(n==16){
+					n=0;
+				}
+				else{
+					n++;
+				}
+				$("#inner").fadeIn(2000);
+				$("#inner").html(pic[n]);
+				$("#inner").fadeOut(500);
+				setTimeout(function(){ccc()},3000);
+			}
+
+		});		//
+		//})
+ 		 </script>
+	<body>
+		<div id="main">
+					<button id="start">Autoplay</button>
+				</div>
+			<div id="outer">
+				<div id="inner" class="animate">	
+				</div>
+				<button id="left_button"></button>
+				<button id="right_button"></button
+			</div>
+		</div>
+	</body>
+</html>

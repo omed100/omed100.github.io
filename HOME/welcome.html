@@ -1,0 +1,86 @@
+<DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<link rel="icon" href="video/Home-icon.png" type="image/x-icon" />
+		<title>Welcome</title>
+		<link rel="stylesheet" type="text/css" href="css/welcome.css">
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+	</head>
+	<body>
+		<div class="main_div">
+			<div class="main_features_contaier" id="main">
+				<div class="header_div">
+					<div class="welcome_container"></div>
+					<div class="clock_container" id="digital">12:12:12 AM</div>
+				</div>
+				<div class="main_body">
+					<div  class="web_logo"></div>
+					<div class="indicatoe" onmouseover="displayIt();" onmouseout="hideIt();" onclick="gotoPage();"></div>
+					<div class="clickhere" id="x">
+						Click Here
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+	
+	window.onload = function()
+	{
+		var el = document.getElementById('main');
+		el.style.marginTop = "0px";
+		el.style.transition = "all 5s";
+		el.style.WebkitTransition = "all 5s";
+	}
+
+	function displayIt()
+	{
+		document.getElementById('x').style.display = "block";
+	}
+	function hideIt()
+	{
+		document.getElementById('x').style.display = "none";
+	}
+	function gotoPage()
+	{
+		window.location="http://192.168.12.83:8080/HOME/home.html";
+	}
+	function startTime()
+	{
+		var currentTime = new Date();
+		//console.log(currentTime);
+		var am = "AM";
+		var h = currentTime.getHours();
+		var m = currentTime.getMinutes();
+		var s = currentTime.getSeconds();
+		if(h==0)
+			{
+				h=12;
+			}
+		else if (h>12) 
+			{
+				h=h-12;
+				am = "PM";
+			}
+			if(h<10)
+			{
+				h = "0"+h;
+			}
+			if(m<10)
+			{
+				m = "0"+m;
+			}
+			if(s<10)
+			{
+				s = "0"+s;
+			}
+			setTimeout("startTime()",1000);
+			//console.log(h+":"+m+":"+s+" "+am);
+			var myClock = document.getElementById("digital");
+			myClock.textContent = h+":"+m+":"+s+" "+am ;
+		}
+			startTime();
+
+	</script>
+<html>

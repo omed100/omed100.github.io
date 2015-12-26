@@ -19,6 +19,7 @@
 				background:url("https://pbs.twimg.com/profile_images/664679610789982208/kWBy-7Qj.jpg");
 				background-size:cover;
 				background-repeat:no-repeat;
+				margin-left:200px;
 			}
 			#outerDiv:hover
 			{
@@ -78,7 +79,8 @@
 	</head>
 	<body>
 
-		<div>
+		<div id="headerLink">
+			</br>
 			<a href="HOME/home.html" target="_blank">Click Here</a>
 		</div>
 		<div id="outerDiv">
@@ -120,8 +122,13 @@
 	window.onload = addListeners();
 	window.onload =function()
 	{
-	   document.getElementById("outerDiv").style.marginLeft="500px";
-	    document.getElementById("outerDiv").style.marginLeft="10px";
+	    var person=prompt("Please Enter Your Name?");
+
+		    if (person!=null)
+		    {
+		        x="Hello " + person + ",Welcome Omed's Website,Have A Good Day!!";
+		        document.getElementById("headerLink").innerHTML=x;
+		    }
 	}
 	</script>
 </html>

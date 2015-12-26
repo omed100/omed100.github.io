@@ -472,11 +472,11 @@ body
 }
 .call_logo
 {
-	height: 50px;
-	width: 50px;
+	height: 40px;
+	width: 40px;
 	/*border: 1px solid;*/
 	float: left;
-	background: url("https://upload.wikimedia.org/wikipedia/commons/c/cd/Facebook_logo_%28square%29.png");
+	background: url("http://icons.iconarchive.com/icons/martz90/circle/512/whatsapp-icon.png");
 	background-size:cover;
 	background-repeat: no-repeat;
 	background-size: 45px 45px;
@@ -494,8 +494,8 @@ body
 }
 .zoho_logo
 {
-	height: 50px;
-	width: 50px;
+	height: 40px;
+	width: 40px;
 	background: url("http://www.djltraining.com/files/Mail-512.png");
 	background-size:cover;
 	background-repeat: no-repeat;
@@ -514,8 +514,8 @@ body
 }
 .gmail_logo
 {
-	height: 50px;
-	width: 50px;
+	height: 40px;
+	width: 40px;
 	background: url("http://ellisbenus.com/wp-content/uploads/2014/10/gmail-icon-transparent-background.png");
 	background-size:cover;
 	background-repeat: no-repeat;
@@ -534,8 +534,8 @@ body
 }
 .youtube_logo
 {
-	height: 50px;
-	width: 50px;
+	height: 40px;
+	width: 40px;
 	float: left;
 	background: url("http://icons.iconarchive.com/icons/marcus-roberto/google-play/512/YouTube-icon.png");
 	background-size:cover;
@@ -554,8 +554,8 @@ body
 }
 .facebook_logo
 {
-	height: 50px;
-	width: 50px;
+	height: 40px;
+	width: 40px;
 	float: left;
 	background: url("https://upload.wikimedia.org/wikipedia/commons/c/cd/Facebook_logo_%28square%29.png");
 	background-size:cover;
@@ -575,8 +575,8 @@ body
 //
 .insta_logo
 {
-	height: 50px;
-	width: 50px;
+	height: 40px;
+	width: 40px;
 	float: left;
 	background: url("http://www.finestpitbullsmade.com/wp-content/uploads/2015/03/instagram-logo-transparent-png-i91.png");
 	background-size:cover;
@@ -903,4 +903,9 @@ body
 a
 {
 	text-decoration:none;
+}
+#iframezohocreator
+{
+	margin-top:10px;
+	margin-left:25px;
 }

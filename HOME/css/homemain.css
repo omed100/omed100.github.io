@@ -476,7 +476,8 @@ body
 	width: 50px;
 	/*border: 1px solid;*/
 	float: left;
-	background: url("video/whatsapp.png");
+	background: url("https://upload.wikimedia.org/wikipedia/commons/c/cd/Facebook_logo_%28square%29.png");
+	background-size:cover;
 	background-repeat: no-repeat;
 	background-size: 45px 45px;
 	display: inline-block;
@@ -495,7 +496,8 @@ body
 {
 	height: 50px;
 	width: 50px;
-	background: url("video/zohomail.png");
+	background: url("http://www.djltraining.com/files/Mail-512.png");
+	background-size:cover;
 	background-repeat: no-repeat;
 	background-size: 45px 45px;
 	float: left;
@@ -514,7 +516,8 @@ body
 {
 	height: 50px;
 	width: 50px;
-	background: url("video/email-icon.png");
+	background: url("http://ellisbenus.com/wp-content/uploads/2014/10/gmail-icon-transparent-background.png");
+	background-size:cover;
 	background-repeat: no-repeat;
 	background-size: 45px 45px;
 	float: left;
@@ -534,7 +537,8 @@ body
 	height: 50px;
 	width: 50px;
 	float: left;
-	background: url("video/youtube-icon.png");
+	background: url("http://icons.iconarchive.com/icons/marcus-roberto/google-play/512/YouTube-icon.png");
+	background-size:cover;
 	background-repeat: no-repeat;
 	background-size: 45px 45px;
 	cursor: pointer;
@@ -553,12 +557,34 @@ body
 	height: 50px;
 	width: 50px;
 	float: left;
-	background: url("video/fb-icon.png");
+	background: url("https://upload.wikimedia.org/wikipedia/commons/c/cd/Facebook_logo_%28square%29.png");
+	background-size:cover;
 	background-repeat: no-repeat;
 	background-size: 44px 44px;
 	cursor: pointer;
 }
 .contact_feature5
+{
+	font-size: 17px;
+	color: #FFFFFF;
+	line-height: -6px;
+	display: inline-block;
+	line-height: 52px;
+	margin-left: 10px;
+}
+//
+.insta_logo
+{
+	height: 50px;
+	width: 50px;
+	float: left;
+	background: url("http://www.finestpitbullsmade.com/wp-content/uploads/2015/03/instagram-logo-transparent-png-i91.png");
+	background-size:cover;
+	background-repeat: no-repeat;
+	background-size: 44px 44px;
+	cursor: pointer;
+}
+.contact_feature6
 {
 	font-size: 17px;
 	color: #FFFFFF;
@@ -871,5 +897,10 @@ body
 }
 .header_first
 {
-	margin-top:200px;
+	margin-top:95px;
+	color:red;
+}
+a
+{
+	text-decoration:none;
 }

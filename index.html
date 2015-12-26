@@ -97,9 +97,6 @@
 	    document.getElementById('outerDiv').addEventListener('mousedown', mouseDown, false);
 	    window.addEventListener('mouseup', mouseUp, false);
 	    
-	    document.getElementById("outerDiv").style.marginLeft="200px";
-	    document.getElementById("outerDiv").style.marginLeft="10px";
-
 	}
 
 	function mouseUp()
@@ -121,5 +118,10 @@
 	}
 
 	window.onload = addListeners();
+	window.onload =function()
+	{
+	   document.getElementById("outerDiv").style.marginLeft="200px";
+	    document.getElementById("outerDiv").style.marginLeft="10px";
+	}
 	</script>
 </html>

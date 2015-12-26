@@ -127,8 +127,13 @@
 
 		    if (person!=null)
 		    {
-		        x="Hello " + person + ",Welcome Omed's Website,Have A Good Day!!";
+		        x="Hello <span style='color:red;'>" + person + "</span>,Welcome Omed's Website,Have A Good Day!!";
 		        document.getElementById("headerLink").innerHTML=x;
+		    }
+		    else
+		    {
+		    	x ="Hello " + "Empty" + ",Welcome Omed's Website,Have A Good Day!!";
+		    	document.getElementById("headerLink").innerHTML=x;
 		    }
 	}
 	</script>

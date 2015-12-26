@@ -573,26 +573,7 @@ body
 	margin-left: 10px;
 }
 //
-.insta_logo
-{
-	height: 40px;
-	width: 40px;
-	float: left;
-	background: url("http://www.finestpitbullsmade.com/wp-content/uploads/2015/03/instagram-logo-transparent-png-i91.png");
-	background-size:cover;
-	background-repeat: no-repeat;
-	background-size: 44px 44px;
-	cursor: pointer;
-}
-.contact_feature6
-{
-	font-size: 17px;
-	color: #FFFFFF;
-	line-height: -6px;
-	display: inline-block;
-	line-height: 52px;
-	margin-left: 10px;
-}
+
 .right_contact
 {
 	height: 490px;
@@ -903,6 +884,7 @@ body
 a
 {
 	text-decoration:none;
+	color:white;
 }
 #iframezohocreator
 {

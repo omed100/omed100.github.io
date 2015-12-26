@@ -33,16 +33,39 @@
 				font weight:bold;
 				font-size:15px;
 			}
+			#bg
+			{
+				width:100%;
+				height:800px;
+			}
+			#bg_container
+			{
+				width:100%;
+				height:800px;
+				overflow:hidden;
+			}
+			#content
+			{
+				position:absolute;
+				top:5px;
+				padding:10px;
+				
+			}
 		</style>
 	</head>
 	<body>
-	<iframe width="560" height="315" src="https://www.youtube.com/embed/fpiAxUy3Kdw" frameborder="0" allowfullscreen></iframe>
-		<!--<div>
+		<div id="bg_container">
+		<iframe id="bg" src="https://www.youtube.com/embed/fpiAxUy3Kdw" frameborder="0"></iframe>
+	
+	</div>
+	<div id="content">
+		<div>
 			<a href="HOME/home.html" target="_blank">Click Here</a>
 		</div>
 		<div id="outerDiv">
 		
-		</div>-->
+		</div>
+	</div>
 
 	</body>
 	<script type="text/javascript">
